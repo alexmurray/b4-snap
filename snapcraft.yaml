@@ -12,6 +12,9 @@ description: |
   to Lore and Data in the Star Trek universe.
 
   Full documentation is available on https://b4.docs.kernel.org/.
+license: GPL-2.0-or-later
+website: https://git.kernel.org/pub/scm/utils/b4/b4.git/about/
+issues: https://github.com/alexmurray/b4-snap/issues
 
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: classic
