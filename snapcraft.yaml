@@ -1,0 +1,28 @@
+name: b4
+base: core22
+version: 0.12.2
+summary: A tool to work with public-inbox and patch archives
+description: |
+  This is a helper utility to work with patches and pull requests made available
+  via a public-inbox archive like lore.kernel.org. It is written to make it
+  easier to participate in a patch-based workflows, like those used in the Linux
+  kernel development.
+
+  The name “b4” was chosen for ease of typing and because B-4 was the precursor
+  to Lore and Data in the Star Trek universe.
+
+  Full documentation is available on https://b4.docs.kernel.org/.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: classic
+
+apps:
+  b4:
+    command: bin/b4
+    environment:
+      PYTHONPATH: /snap/b4/current/lib/python3.10/site-packages/
+
+parts:
+  b4:
+    plugin: python
+    source: https://git.kernel.org/pub/scm/utils/b4/b4.git
