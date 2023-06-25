@@ -1,6 +1,6 @@
 name: b4
 base: core22
-version: 0.12.2
+version: 0.12.3
 summary: A tool to work with public-inbox and patch archives
 description: |
   This is a helper utility to work with patches and pull requests made available
@@ -22,10 +22,14 @@ confinement: classic
 apps:
   b4:
     command: bin/b4
-    environment:
-      PYTHONPATH: /snap/b4/current/lib/python3.10/site-packages/
 
 parts:
   b4:
     plugin: python
     source: https://git.kernel.org/pub/scm/utils/b4/b4.git
+    stage-packages:
+      - python3
+      - python3.10
+      - python3.10-venv
+      - libpython3.10-minimal
+      - libpython3.10-stdlib
